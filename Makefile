@@ -20,3 +20,6 @@ i686:
 x86_64:
 	time sudo setarch $@ ./vmbuilder/kvm/rhel/6/vmbuilder.sh \
 	--config-path ./vmbuilder.conf
+
+runvm:
+	sudo ./vmbuilder/kvm/rhel/6/misc/kvm-ctl.sh start --image-path box-disk1.raw --brname vboxbr0
